@@ -1,45 +1,55 @@
 import React, { useState } from 'react';
-import { Nav, NavLink, NavItem } from 'reactstrap';
-
+import { Nav, NavItem } from 'reactstrap';
+import logo from '../images/logograndebranco.png';
+import logoContato from '../images/logopnggdeitado.png';
+import { Link, useLocation } from 'react-router-dom';
+import '../css/Menu.css';
 function Menu() {
 
     const [isOpen, setIsOpen] = useState(false);
     const toogle = () => setIsOpen(!isOpen);
+    const [paginaContato, mudaPagina] = useState(false);
+    const loc = useLocation().pathname;
+    const logoAtual = loc === "/Contato" ? logoContato : logo;
 
     return (
         <div>
+            <img className="logo" src={logoAtual}
+                alt='Mona Cerâmica logo'
+                style={{
+                    maxWidth: '60%', height: 'auto', margin: '0', alignSelf: 'flex-start', top: '30px',
+                    left: '30px'
+                }} />
             <Nav vertical>
                 <NavItem>
-                    <NavLink href="/">
-                        <img src='./images/temporario.jpg' 
-                        alt='Mona Cerâmica logo'
-                        style={{ maxWidth: '100%', height: 'auto' }}/>
-                    </NavLink>
+                    <Link to="/">
+
+                    </Link>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="/MoniqueAndrade">
-                       Monique Andrade
-                    </NavLink>
+                    <Link to="/MoniqueAndrade">
+                        Monique Andrade
+                    </Link>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="/Ceramica">
+                    <Link to="/Ceramica">
                         Cerâmica
-                    </NavLink>
+                    </Link>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="/Evento">
+                    <Link to="/Evento">
                         Evento
-                    </NavLink>
+                    </Link>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="/Contato">
+                    <Link to="/Contato" >
                         Contato
-                    </NavLink>
+                    </Link>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="/Loja">
-                       Loja
-                    </NavLink>
+                    <Link to="/Loja">
+                        Loja
+                    </Link>
                 </NavItem>
 
             </Nav>

@@ -17,23 +17,26 @@ function App() {
     <Container fluid>
       <BrowserRouter>
         <Row>
-          <Col>
+          <Col xs='2'>
             {/* Nav */}
-            <Menu/>
+            <Menu />
           </Col>
-        </Row>
-        <Row>
-          {/* Conteúdo */}
           <Col>
-            {/* Rotas do site */}
-            <Routes>
-              <Route exact path="/" element={<Home />} />
-              <Route path="/MoniqueAndrade" element={<MoniqueAndrade />} />
-              <Route path="/Ceramica" element={<Ceramica />} />
-              <Route path="/Evento" element={<Evento />} />
-              <Route path="/Contato" element={<Contato />} />
-              <Route path="/Loja" element={<Loja />} />
-            </Routes>
+            <Row>
+              {/* Conteúdo */}
+              <Col>
+                {/* Rotas do site */}
+                <Routes>
+                  <Route exact path="/" element={<Home />} />
+                  <Route path="/MoniqueAndrade" element={<MoniqueAndrade />} />
+                  <Route path="/Ceramica" element={<Ceramica />} />
+                  <Route path="/Evento" element={<Evento />} />
+                  <Route path="/Contato" element={<Contato />} />
+                  <Route path="/Loja" element={<Loja />} />
+                </Routes>
+              </Col>
+            </Row>
+
           </Col>
         </Row>
       </BrowserRouter>

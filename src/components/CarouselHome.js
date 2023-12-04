@@ -6,24 +6,28 @@ import {
     CarouselIndicators,
     CarouselCaption,
 } from 'reactstrap';
+import mesa from '../images/mesamao3.png';
+import uva from '../images/cumbucabrancafrente.png';
+import conjunto from '../images/conjuntomarrom2.png';
+
 
 const items = [
     {
-        src: 'https://picsum.photos/id/123/1200/400',
-        altText: 'Slide 1',
-        caption: 'Slide 1',
+        src: {mesa},
+        altText: 'mesa',
+        caption: 'mesa',
         key: 1,
     },
     {
-        src: 'https://picsum.photos/id/456/1200/400',
-        altText: 'Slide 2',
-        caption: 'Slide 2',
+        src: {uva},
+        altText: 'uva',
+        caption: 'uva',
         key: 2,
     },
     {
-        src: 'https://picsum.photos/id/678/1200/400',
-        altText: 'Slide 3',
-        caption: 'Slide 3',
+        src: {conjunto},
+        altText: 'conjunto',
+        caption: 'conjunto',
         key: 3,
     },
 ];
